@@ -10,6 +10,8 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Collections {
+	
+	protected int temp=0;
 
 	public static void main(String[] args) {
 		// arraylistExample();

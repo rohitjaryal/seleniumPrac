@@ -2,10 +2,15 @@ package core.seleniumPrac;
 
 public class JavaPractice {
 
+	public static void main(String[] args) {
+		System.out.println("Started");
+		// linearSearch(700);
+		findSecondHighestVal();
+	}
+
 	public static String reverseString(String str) {
 		char[] ch = str.toCharArray();
 		int lenghtOfArray = ch.length - 1;
-		String tempStr = "";
 		char[] ch2 = new char[ch.length];
 
 		for (int i = 0; i <= lenghtOfArray; i++) {
@@ -96,4 +101,40 @@ public class JavaPractice {
 
 	}
 
+	public static void linearSearch(int valueToSearch) {
+		int[] linearVal = { 10, 56, 11, 5, 99, 85, 32, 33, 36, 70 };
+
+		for (int i = 0; i < linearVal.length; i++) {
+			if (linearVal[i] == valueToSearch) {
+				System.out.println("Value found");
+			} else if (i == linearVal.length - 1) {
+				System.out.println("Value not found");
+			}
+		}
+	}
+
+	public static void findSecondHighestVal() {
+
+		int[] linearVal = { 9,8,7,6,5,4,3,2,1 };
+
+		int temp = 0;
+		for (int i = 0; i < linearVal.length; i++) {
+			for (int j = 0; j < linearVal.length; j++) {
+				if (j < linearVal.length-1) {
+					if (linearVal[j] > linearVal[j + 1]) {
+						temp = linearVal[j + 1];
+						linearVal[j + 1] = linearVal[j];
+						linearVal[j] = temp;
+					}
+				}
+			}
+		}
+		System.out.println("Second highest element is :"
+				+ linearVal[linearVal.length - 2]);
+
+		
+		for(int i:linearVal) {
+			System.out.println(i+" ");
+		}
+	}
 }

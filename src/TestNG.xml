@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="seleniumPrac" parallel="false">
+  <test name="Verify browser open and close">
+  <parameter name="browser" value="firefox"/> 
+  <parameter name="url" value="http://www.google.co.in"/> 
+    <classes>
+      <class name="core.seleniumPrac.OpenAndClosebrowser"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
